@@ -30,7 +30,7 @@ var sip_phone_number;
 
 var constraints = {
     audio: true,
-    video: true
+    video: false
 };
 URL = window.URL || window.webkitURL;
 
@@ -86,7 +86,7 @@ function testStart(){
         if(data.originator == 'remote'){ //incoming call
             console.info("incomingSession, answer the call");
             incomingSession = data.session;
-            data.session.answer({'mediaConstraints' : { 'audio': true, 'video': true}, 'mediaStream': localStream});
+            data.session.answer({'mediaConstraints' : { 'audio': true, 'video': false}, 'mediaStream': localStream});
         }else{
             console.info("outgoingSession");
             outgoingSession = data.session;

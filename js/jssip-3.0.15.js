@@ -470,7 +470,8 @@ module.exports = DigestAuthentication;
 var debug = require('debug')('JsSIP:DigestAuthentication');
 var debugerror = require('debug')('JsSIP:ERROR:DigestAuthentication');
 debugerror.log = console.warn.bind(console);
-var Utils = require('../lib/utils');
+var Utils = require('./Utils');
+// var Utils = require('../lib/utils');
 
 
 function DigestAuthentication(credentials) {
